@@ -38,10 +38,11 @@ try {
         Copy-Item -LiteralPath $packagePath -Destination $archivePath -Force
         Write-Output "配布用ZIP: $archivePath"
 
-        # 公開済みZIPとバージョンを対応させる。リポジトリ直下への反映はRelease公開後に行う。
+        # Releasesの取得が504になる環境向けに、バージョン別のZIPをraw配信する。
+        # リポジトリ直下への反映はdist内のZIPを公開・検証した後に行う。
         $repositoryEntry = Get-Content -LiteralPath (Join-Path $outputRoot 'Voiceroid2XIV.json') -Raw | ConvertFrom-Json -AsHashtable
-        $releaseTag = "v$($manifest.AssemblyVersion)"
-        $downloadUrl = "$($manifest.RepoUrl)/releases/download/$releaseTag/$(Split-Path -Leaf $archivePath)"
+        $repositorySlug = ([Uri]$manifest.RepoUrl).AbsolutePath.TrimEnd('/')
+        $downloadUrl = "https://raw.githubusercontent.com$repositorySlug/main/dist/$($manifest.AssemblyVersion)/$(Split-Path -Leaf $archivePath)"
         $repositoryEntry['DownloadLinkInstall'] = $downloadUrl
         $repositoryEntry['DownloadLinkUpdate'] = $downloadUrl
         $repositoryEntry['DownloadLinkTesting'] = $downloadUrl

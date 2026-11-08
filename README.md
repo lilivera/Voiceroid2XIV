@@ -33,6 +33,8 @@ VOICEROID2の音声合成エンジン自体は同梱しません。VOICEROID+、
 
 ソースから試す場合、ビルド後のDLLは `src/Voiceroid2XIV/bin/Release/Voiceroid2XIV.dll` です。このパスをDev Plugin Locationsに登録し、開発者向け一覧から読み込めます。手動配置には[ReleasesのZIP](https://github.com/lilivera/Voiceroid2XIV/releases)を専用フォルダーへ展開し、依存DLLと `bridge`、`images` フォルダーをまとめて配置してください。
 
+カスタムリポジトリからのインストール時に「プラグインのインストールに失敗しました」と表示され、ログにZIPダウンロードの504エラーがある場合は、一覧の「新しいプラグインを確認」で配布情報を更新してから再試行してください。配布先をGitHub Releasesから直接配信のURLへ切り替えています。登録URLは変わりません。
+
 ## ゲーム内コマンド
 
 | コマンド | 動作 |
