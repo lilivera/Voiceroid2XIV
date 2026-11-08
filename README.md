@@ -19,7 +19,7 @@ VOICEROID2の音声合成エンジン自体は同梱しません。VOICEROID+、
    https://raw.githubusercontent.com/lilivera/Voiceroid2XIV/main/pluginmaster.json
    ```
 
-2. `/xlplugins` で一覧を開き、必要なら「新しいプラグインを確認」を押します。`Voiceroid2XIV` を検索してインストールします。
+2. `/xlplugins` で一覧を開きます。既に開いている場合はいったん閉じて開き直し、配布情報の読み込みが完了するまで待ちます。`Voiceroid2XIV` を検索してインストールします。
 3. 既存のSimpleVoiceroid2Proxyを終了します。VOICEROID2は起動したままで構いません。
 4. `/v2xiv` で設定画面を開き、「接続」を押します。以前のProxyを管理者権限で使っていた場合は、先に「ヘルパーを管理者権限で起動」を有効にし、接続時のWindowsの確認画面で許可してください。実行ファイルの欄は空欄で自動検出します。見つからない場合は `VoiceroidEditor.exe` を指定します。
 5. 「読み上げ」で発声を確認します。必要に応じて「プラグイン読込時に接続」「選択したチャットを読み上げる」を有効にします。
@@ -33,7 +33,7 @@ VOICEROID2の音声合成エンジン自体は同梱しません。VOICEROID+、
 
 ソースから試す場合、ビルド後のDLLは `src/Voiceroid2XIV/bin/Release/Voiceroid2XIV.dll` です。このパスをDev Plugin Locationsに登録し、開発者向け一覧から読み込めます。手動配置には[ReleasesのZIP](https://github.com/lilivera/Voiceroid2XIV/releases)を専用フォルダーへ展開し、依存DLLと `bridge`、`images` フォルダーをまとめて配置してください。
 
-カスタムリポジトリからのインストール時に「プラグインのインストールに失敗しました」と表示され、ログにZIPダウンロードの504エラーがある場合は、一覧の「新しいプラグインを確認」で配布情報を更新してから再試行してください。配布先をGitHub Releasesから直接配信のURLへ切り替えています。登録URLは変わりません。
+カスタムリポジトリからのインストール時に「プラグインのインストールに失敗しました」と表示され、ログにZIPダウンロードの504エラーがある場合は、エラーダイアログとプラグイン一覧を閉じ、`/xlplugins` で開き直してから再試行してください。一覧を開き直すと配布情報が再取得されます。配布先をGitHub Releasesから直接配信のURLへ切り替えています。登録URLは変わりません。
 
 ## ゲーム内コマンド
 
