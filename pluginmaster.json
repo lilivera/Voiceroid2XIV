@@ -1,0 +1,30 @@
+[
+  {
+    "Author": "Taichi",
+    "Name": "Voiceroid2XIV",
+    "InternalName": "Voiceroid2XIV",
+    "AssemblyVersion": "0.1.4.0",
+    "Description": "VOICEROID2をゲーム内から操作し、チャットや互換HTTP APIで受け取った文章を読み上げます。",
+    "ApplicableVersion": "any",
+    "RepoUrl": "https://github.com/lilivera/Voiceroid2XIV",
+    "Tags": [
+      "tts",
+      "voiceroid",
+      "chat"
+    ],
+    "DalamudApiLevel": 15,
+    "LoadRequiredState": 0,
+    "LoadSync": false,
+    "CanUnloadAsync": true,
+    "LoadPriority": 0,
+    "IconUrl": "https://raw.githubusercontent.com/lilivera/Voiceroid2XIV/main/src/Voiceroid2XIV/images/icon.png",
+    "Punchline": "VOICEROID2によるチャットと外部通知の読み上げ",
+    "AcceptsFeedback": false,
+    "DownloadLinkInstall": "https://github.com/lilivera/Voiceroid2XIV/releases/download/v0.1.4.0/Voiceroid2XIV-0.1.4.0.zip",
+    "DownloadLinkUpdate": "https://github.com/lilivera/Voiceroid2XIV/releases/download/v0.1.4.0/Voiceroid2XIV-0.1.4.0.zip",
+    "DownloadLinkTesting": "https://github.com/lilivera/Voiceroid2XIV/releases/download/v0.1.4.0/Voiceroid2XIV-0.1.4.0.zip",
+    "IsHide": false,
+    "IsTestingExclusive": false,
+    "LastUpdate": 1794124013
+  }
+]
