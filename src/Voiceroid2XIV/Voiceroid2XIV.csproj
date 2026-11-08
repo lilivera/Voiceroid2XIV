@@ -1,7 +1,7 @@
 <Project Sdk="Dalamud.NET.Sdk/15.0.0">
   <PropertyGroup>
-    <Version>0.1.4</Version>
-    <Author>Taichi</Author>
+    <Version>0.1.5</Version>
+    <Author>lilivera</Author>
     <Name>Voiceroid2XIV</Name>
     <Punchline>VOICEROID2によるチャットと外部通知の読み上げ</Punchline>
     <Description>VOICEROID2をゲーム内から操作し、チャットや互換HTTP APIで受け取った文章を読み上げます。</Description>

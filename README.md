@@ -128,7 +128,7 @@ Dalamud (.NET 10 / x64)
 pwsh -File scripts/build.ps1
 ```
 
-固定済みの依存関係を復元し、ソリューションのReleaseビルド、テスト、配布ZIPの作成を行います。出力先は `artifacts/Voiceroid2XIV-0.1.4.0.zip` です。依存ライブラリとヘルパー、アイコン、ライセンス文書を含みます。合わせて `artifacts/pluginmaster.json` を生成します。公開手順は [docs/publishing.md](docs/publishing.md) を参照してください。
+固定済みの依存関係を復元し、ソリューションのReleaseビルド、テスト、配布ZIPの作成を行います。出力先は `artifacts/Voiceroid2XIV-0.1.5.0.zip` です。依存ライブラリとヘルパー、アイコン、ライセンス文書を含みます。合わせて `artifacts/pluginmaster.json` を生成します。公開手順は [docs/publishing.md](docs/publishing.md) を参照してください。
 
 Dalamudの開発用プラグイン一覧のアイコンは、出力先の `images/icon.png` から読み込まれます。同梱画像は512×512の透過PNGです。生成元と制作情報は `assets/icon/` に保存しています。
 
