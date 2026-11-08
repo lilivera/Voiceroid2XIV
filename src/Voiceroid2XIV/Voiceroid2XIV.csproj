@@ -1,0 +1,34 @@
+<Project Sdk="Dalamud.NET.Sdk/15.0.0">
+  <PropertyGroup>
+    <Version>0.1.4</Version>
+    <Author>Taichi</Author>
+    <Name>Voiceroid2XIV</Name>
+    <Punchline>VOICEROID2によるチャットと外部通知の読み上げ</Punchline>
+    <Description>VOICEROID2をゲーム内から操作し、チャットや互換HTTP APIで受け取った文章を読み上げます。</Description>
+    <Tags>tts;voiceroid;chat</Tags>
+    <DalamudApiLevel>15</DalamudApiLevel>
+    <CanUnloadAsync>true</CanUnloadAsync>
+    <AcceptsFeedback>false</AcceptsFeedback>
+    <RepoUrl>https://github.com/lilivera/Voiceroid2XIV</RepoUrl>
+    <IconUrl>https://raw.githubusercontent.com/lilivera/Voiceroid2XIV/main/src/Voiceroid2XIV/images/icon.png</IconUrl>
+    <OutputPath>bin/$(Configuration)/</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="images/icon.png" CopyToOutputDirectory="PreserveNewest" />
+    <ProjectReference Include="../Voiceroid2XIV.Runtime/Voiceroid2XIV.Runtime.csproj" />
+    <ProjectReference Include="../Voiceroid2XIV.Bridge/Voiceroid2XIV.Bridge.csproj"
+                      ReferenceOutputAssembly="false" SkipGetTargetFrameworkProperties="true" />
+    <Content Include="../../THIRD-PARTY-NOTICES.md" Link="THIRD-PARTY-NOTICES.md" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="../../LICENSE" Link="LICENSE" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="../../README.md" Link="README.md" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="../../docs/manual-test.md" Link="docs/manual-test.md" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="../../docs/publishing.md" Link="docs/publishing.md" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="../../licenses/*" Link="licenses/%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+  <Target Name="CopyBridge" AfterTargets="Build" BeforeTargets="DefaultDalamudPackagerDebug;DefaultDalamudPackagerRelease">
+    <ItemGroup>
+      <BridgeFiles Include="../Voiceroid2XIV.Bridge/bin/$(Configuration)/net481/**/*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(BridgeFiles)" DestinationFiles="@(BridgeFiles->'$(OutputPath)bridge/%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+  </Target>
+</Project>

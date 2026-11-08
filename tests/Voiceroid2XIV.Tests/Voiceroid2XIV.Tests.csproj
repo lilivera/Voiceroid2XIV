@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../src/Voiceroid2XIV.Runtime/Voiceroid2XIV.Runtime.csproj" />
+    <ProjectReference Include="../Voiceroid2XIV.TestBridge/Voiceroid2XIV.TestBridge.csproj" ReferenceOutputAssembly="false" />
+    <ProjectReference Include="../../src/Voiceroid2XIV.Bridge/Voiceroid2XIV.Bridge.csproj"
+                      ReferenceOutputAssembly="false" SkipGetTargetFrameworkProperties="true" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.0.1" />
+    <PackageReference Include="xunit" Version="2.9.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="3.1.4" PrivateAssets="all" />
+    <Using Include="Xunit" />
+  </ItemGroup>
+  <Target Name="CopyTestBridge" AfterTargets="Build">
+    <ItemGroup>
+      <TestBridgeFiles Include="../Voiceroid2XIV.TestBridge/bin/$(Configuration)/net10.0-windows/**/*" />
+      <ActualBridgeFiles Include="../../src/Voiceroid2XIV.Bridge/bin/$(Configuration)/net481/**/*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(TestBridgeFiles)" DestinationFiles="@(TestBridgeFiles->'$(OutputPath)test-bridge/%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(ActualBridgeFiles)" DestinationFiles="@(ActualBridgeFiles->'$(OutputPath)actual-bridge/%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+  </Target>
+</Project>

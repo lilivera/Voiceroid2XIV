@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "dependencies": {
+    ".NETFramework,Version=v4.8.1": {
+      "Codeer.Friendly.Windows.Grasp": {
+        "type": "Direct",
+        "requested": "[2.14.2, )",
+        "resolved": "2.14.2",
+        "contentHash": "Q6pFtt5s3Tg18xz3AGAvi1jZeid+uZocRdLapd9fS70Tg6j4Two2y+q2h+ABgY/GfmQIpfUlPRGlEmzXgKHvlg==",
+        "dependencies": {
+          "Codeer.Friendly.Windows": "2.17.0"
+        }
+      },
+      "Microsoft.NETFramework.ReferenceAssemblies": {
+        "type": "Direct",
+        "requested": "[1.0.3, )",
+        "resolved": "1.0.3",
+        "contentHash": "vUc9Npcs14QsyOD01tnv/m8sQUnGTGOw1BCmKcv77LBJY7OxhJ+zJF7UD/sCL3lYNFuqmQEVlkfS4Quif6FyYg==",
+        "dependencies": {
+          "Microsoft.NETFramework.ReferenceAssemblies.net481": "1.0.3"
+        }
+      },
+      "RM.Friendly.WPFStandardControls": {
+        "type": "Direct",
+        "requested": "[1.59.1, )",
+        "resolved": "1.59.1",
+        "contentHash": "BtFKxArLsX5xdLcozRCOCdt1Yabyed7XsXtin6Elexkec8URyM+xgWEG+TbStsNwJVATjlPXFGHL7vhX/WebjQ==",
+        "dependencies": {
+          "Codeer.Friendly.Windows.Grasp": "2.14.2",
+          "Codeer.TestAssistant.GeneratorToolKit": "3.13.0"
+        }
+      },
+      "Codeer.Friendly": {
+        "type": "Transitive",
+        "resolved": "2.6.1",
+        "contentHash": "nhYjSzXTMR0yc5fAl7Pr55eijb40dZnf41SbWPycdZ1IjitRM7RvLGwxO3/dpVVx9s1QTjomn26MfQnvFxsujw=="
+      },
+      "Codeer.Friendly.Windows": {
+        "type": "Transitive",
+        "resolved": "2.17.0",
+        "contentHash": "2aGvdmEiFSOHw3I06esSw1MVeLBl9yxTuC36E12Yne3NjMalSQqA/uiVpcq/PFpZWJYvm9ccM3NfN4G5RliEiQ==",
+        "dependencies": {
+          "Codeer.Friendly": "2.6.1"
+        }
+      },
+      "Codeer.TestAssistant.GeneratorToolKit": {
+        "type": "Transitive",
+        "resolved": "3.13.0",
+        "contentHash": "m+Lizo1XwZsWRo71S1se9LYdUPEcHx1TbkpZcmuqCyYyF9G1OqLBRvNWVYvbIWM+yb6ARKbtC8k7qPpzp63ASg=="
+      },
+      "Microsoft.NETFramework.ReferenceAssemblies.net481": {
+        "type": "Transitive",
+        "resolved": "1.0.3",
+        "contentHash": "Vv/20vgHS7VglVOVh8J3Iz/MA+VYKVRp9f7r2qiKBMuzviTOmocG70yq0Q8T5OTmCONkEAIJwETD1zhEfLkAXQ=="
+      },
+      "Newtonsoft.Json": {
+        "type": "Transitive",
+        "resolved": "13.0.3",
+        "contentHash": "HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ=="
+      },
+      "voiceroid2xiv.core": {
+        "type": "Project",
+        "dependencies": {
+          "Newtonsoft.Json": "[13.0.3, )"
+        }
+      }
+    },
+    ".NETFramework,Version=v4.8.1/win-x86": {}
+  }
+}

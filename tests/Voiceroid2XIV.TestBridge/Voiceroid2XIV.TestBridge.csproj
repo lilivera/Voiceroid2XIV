@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <OutputType>WinExe</OutputType>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../src/Voiceroid2XIV.Core/Voiceroid2XIV.Core.csproj" />
+    <Compile Include="../../src/Voiceroid2XIV.Bridge/BridgeConsole.cs" Link="BridgeConsole.cs" />
+  </ItemGroup>
+</Project>
